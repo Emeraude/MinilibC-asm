@@ -1,0 +1,56 @@
+Mini projet d'assembleur x86_64 : ASM MiniLibC.
+
+	Le but de ce projet est de réaliser une librarie dynamique Elf
+	pouvant remplacer (en partie) la librairie standard C que vous
+	utilisez tous les jours.
+
+	Grâce au mini-projet "malloc" & au TP#2 vous savez comment les
+	librairies dynamiques et les fonctions de vos librairies
+	peuvent remplacer celles de la LibC (weak binding).
+
+	Pour chaque fonction, nous vérifierons si vous avez compris le
+	code que vous avez produit. Une compréhension "approximative"
+	signifie pour nous que vous avez triché.
+
+	Il vaut mieux que cela ne marche pas plutôt que cela marche
+	mais que vous ne sachiez pas pourquoi.
+
+	:: Bonus
+
+	Ces quelques idées sont données à titre indicatif & aucun
+        bonus ne sera évalué si la partie obligatoire n'est pas implémentée.
+
+	- Des fonctions supplémentaires.
+	- Architectures supplémentaires.
+
+	:: Voici ce que doit comprendre votre libc
+
+	strlen.
+	strchr.
+	memset.
+	memcpy.
+	strcmp.
+	memmove.
+
+	strncmp.
+	strcasecmp.
+	rindex.
+
+	strstr.
+	strpbrk.
+	strcspn.
+
+        :: Attention
+
+        Toutes les fonctions str*cmp devront renvoyer la différence entre les
+        deux chaînes de caractères comparées.        
+
+	:: Références
+
+	ulibc.
+	dietlibc.
+	glibc.
+	Les pseudo-libc présentes dans la plupart des kernels POSIX.
+
+	
+

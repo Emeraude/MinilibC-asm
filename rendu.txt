@@ -1,0 +1,9 @@
+Nom du répertoire de rendu :
+
+asm_minilibc
+
+Nom de librairie à rendre :
+
+libasm.so
+
+La présence d'un Makefile pour recompiler la librairie est OBLIGATOIRE.
