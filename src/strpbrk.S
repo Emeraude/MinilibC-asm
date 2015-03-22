@@ -1,17 +1,18 @@
 [BITS 64]
 
-	global strnbrk
+	global strpbrk
 	section .text
 
 strpbrk:
 	push rbp
 	mov rbp, rsp
+	jmp loop
 
 start:
 	cmp rdi, 0
 	je fail
 	inc rdi
-	
+
 loop:
 	cmp rdi, [rsi]
 	je win
@@ -26,7 +27,7 @@ win:
 
 fail:
 	mov rax, 0
-	
+
 end:
 	mov rsp, rbp
 	pop rbp
