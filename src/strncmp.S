@@ -11,8 +11,6 @@ strncmp:
 loop:
 	mov al, [rdi + rcx]
 	mov r8b, [rsi + rcx]
-	cmp rcx, rdx
-	je end
 	cmp al, 0
 	je end
 	cmp r8b, 0
@@ -20,6 +18,8 @@ loop:
 	cmp al, r8b
 	jne end
 	inc rcx
+	cmp rcx, rdx
+	je end
 	jmp loop
 
 end:

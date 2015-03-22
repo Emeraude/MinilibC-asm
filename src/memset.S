@@ -7,20 +7,17 @@ memset:
 	push rbp
 	mov rbp, rsp
 
-	push rdi
-	push rdx
 	xor rcx, rcx
+	mov rax, rdi
 loop:
 	cmp rdx, rcx
 	jz end
-	mov [rdi], sil
+	mov [rax], sil
 	inc rcx
-	inc rdi
+	inc rax
 	jmp loop
 
 end:
-	push rdx
-	pop rdi
 	mov rax, rdi
 
 	mov rsp, rbp
