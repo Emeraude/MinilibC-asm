@@ -20,7 +20,8 @@ SRCS		=	$(DIR)/memcpy.S		\
 			$(DIR)/strchr.S		\
 			$(DIR)/strcmp.S		\
 			$(DIR)/strlen.S		\
-			$(DIR)/strncmp.S
+			$(DIR)/strncmp.S	\
+			$(DIR)/strstr.S
 
 ASMFLAGS	=	-f elf64
 
