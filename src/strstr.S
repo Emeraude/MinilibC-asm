@@ -7,32 +7,36 @@ strstr:
 	push rbp
 	mov rbp, rsp
 
-	mov rdx, rsi
-
-	jmp loop
+	jmp reset_count
 start:
-	inc rdi
-	mov rax, rdi
-	mov rsi, rdx
-
-loop:
-	mov r8b, [rdi]
-	mov r9b, [rsi]
-	cmp r9b, 0
-	je end
-	cmp r8b, 0
+	cmp al, 0
 	je fail
-	cmp r8b, [rsi]
-	jne start
 	inc rdi
-	inc rsi
+
+reset_count:
+	mov al, [rdi]
+	mov al, [rsi]
+	xor rcx, rcx
+	
+loop:
+	mov al, [rdi + rcx]
+	mov r8b, [rsi + rcx]
+	cmp r8b, 0
+	jz win
+	cmp al, r8b
+	jne start
+	inc rcx
 	jmp loop
+
+win:
+	mov rax, rdi
+	jmp end
 
 fail:
 	xor rax, rax
-	jmp end
-
-end:
+	
+end:	
 	mov rsp, rbp
 	pop rbp
+
 	ret
