@@ -7,18 +7,17 @@ memmove:
 	push rbp
 	mov rbp, rsp
 
+	dec rdx
 	mov rax, rdi
 	mov r8, rdi
-	mov r9, rsi
-	sub r8, r9
+	sub r8, rsi
 	cmp r8, 0
 	jge overlap_right
 
-	
 overlap_left:
 	xor rcx, rcx
 loop_left:
-	
+
 	cmp rcx, rdx
 	je end
 
@@ -26,7 +25,6 @@ loop_left:
 	mov [rdi + rcx], r8b
 	inc rcx
 	jmp loop_left
-
 
 overlap_right:
 	cmp rdx, 0
