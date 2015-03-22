@@ -12,7 +12,9 @@ NAME		=	libasm.so
 
 DIR		=	src
 
-SRCS		=	$(DIR)/strlen.S
+SRCS		=	$(DIR)/memset.S		\
+			$(DIR)/strchr.S		\
+			$(DIR)/strlen.S
 
 ASMFLAGS	=	-f elf64
 

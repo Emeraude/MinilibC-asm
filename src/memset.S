@@ -1,22 +1,24 @@
 [BITS 64]
 
-	global strlen 		; size_t strlen(char const *s)
+	global memset 		; void *strchr(void *s, int c, size_t n)
 	section .text
 
-strlen:
+memset:
 	push rbp
 	mov rbp, rsp
 
+	push rdi
 	xor rcx, rcx
 loop:
-	cmp BYTE [rdi], 0
+	cmp rdx, rcx
 	jz end
+	mov [rdi], rsi
 	inc rcx
 	inc rdi
 	jmp loop
 
 end:
-	mov rax, rcx
+	pop rdi
 
 	mov rsp, rbp
 	pop rbp
