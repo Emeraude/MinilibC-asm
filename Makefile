@@ -12,7 +12,8 @@ NAME		=	libasm.so
 
 DIR		=	src
 
-SRCS		=	$(DIR)/memset.S		\
+SRCS		=	$(DIR)/memcpy.S		\
+			$(DIR)/memset.S		\
 			$(DIR)/strchr.S		\
 			$(DIR)/strlen.S
 
