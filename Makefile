@@ -26,6 +26,7 @@ SRCS		=	$(DIR)/memcpy.S		\
 			$(DIR)/strncmp.S	\
 			$(DIR)/strncpy.S	\
 			$(DIR)/strpbrk.S	\
+			$(DIR)/strspn.S		\
 			$(DIR)/strstr.S
 
 ASMFLAGS	=	-f elf64
