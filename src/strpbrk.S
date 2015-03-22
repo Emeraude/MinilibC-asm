@@ -6,23 +6,30 @@
 strpbrk:
 	push rbp
 	mov rbp, rsp
+
+	mov rdx, rdi
 	jmp loop
 
-start:
-	cmp rdi, 0
-	je fail
-	inc rdi
+second_loop:
+	cmp BYTE [r8], 0
+	je continue
+	mov al, [rdx]
+	cmp [r8], al
+	je win
+	inc r8
+	jmp second_loop
 
 loop:
-	cmp rdi, [rsi]
-	je win
-	cmp rsi, 0
-	je start
-	inc rsi
-
+	cmp BYTE [rdx], 0
+	je fail
+	mov r8, rsi
+	jmp second_loop
+continue:
+	inc rdx
+	jmp loop
 
 win:
-	mov rax, rdi
+	mov rax, rdx
 	jmp end
 
 fail:
