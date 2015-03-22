@@ -1,8 +1,10 @@
 [BITS 64]
 
 	global strchr 		; char *strchr(char const *s, int c)
+	global index		; char *index(char const *s, int c)
 	section .text
 
+index:
 strchr:
 	push rbp
 	mov rbp, rsp

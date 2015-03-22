@@ -9,10 +9,9 @@ strlen:
 
 	xor rcx, rcx
 loop:
-	cmp BYTE [rdi], 0
+	cmp BYTE [rdi + rcx], 0
 	jz end
 	inc rcx
-	inc rdi
 	jmp loop
 
 end:

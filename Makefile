@@ -15,6 +15,7 @@ DIR		=	src
 SRCS		=	$(DIR)/memcpy.S		\
 			$(DIR)/memset.S		\
 			$(DIR)/memmove.S	\
+			$(DIR)/rindex.S		\
 			$(DIR)/strchr.S		\
 			$(DIR)/strcmp.S		\
 			$(DIR)/strlen.S		\
