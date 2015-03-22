@@ -30,7 +30,7 @@ loop_left:
 
 overlap_right:
 	cmp rdx, 0
-	je end
+	jl end
 	mov r8b, [rsi + rdx]
 	mov [rdi + rdx], r8b
 	dec rdx
