@@ -5,7 +5,7 @@
 ## Login   <broggi_t@epitech.eu>
 ## 
 ## Started on  Sun Mar 22 01:31:16 2015 broggi_t
-## Last update Sun Mar 22 01:31:16 2015 broggi_t
+## Last update Sun Mar 22 20:24:32 2015 duques_g
 ##
 
 NAME		=	libasm.so
@@ -21,7 +21,8 @@ SRCS		=	$(DIR)/memcpy.S		\
 			$(DIR)/strcmp.S		\
 			$(DIR)/strlen.S		\
 			$(DIR)/strncmp.S	\
-			$(DIR)/strstr.S
+			$(DIR)/strstr.S		\
+			$(DIR)/strpbrk.S
 
 ASMFLAGS	=	-f elf64
 
