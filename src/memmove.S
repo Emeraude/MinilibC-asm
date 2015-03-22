@@ -35,7 +35,7 @@ overlap_right:
 	jmp overlap_right
 
 end:
-
+	mov rax, rdi
 	mov rsp, rbp
 	pop rbp
 
