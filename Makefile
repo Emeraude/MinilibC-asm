@@ -19,9 +19,12 @@ SRCS		=	$(DIR)/memcpy.S		\
 			$(DIR)/strcasecmp.S	\
 			$(DIR)/strchr.S		\
 			$(DIR)/strcmp.S		\
+			$(DIR)/strcpy.S		\
 			$(DIR)/strcspn.S	\
 			$(DIR)/strlen.S		\
+			$(DIR)/strnlen.S	\
 			$(DIR)/strncmp.S	\
+			$(DIR)/strncpy.S	\
 			$(DIR)/strpbrk.S	\
 			$(DIR)/strstr.S
 
