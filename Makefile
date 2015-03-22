@@ -15,6 +15,7 @@ DIR		=	src
 SRCS		=	$(DIR)/memcpy.S		\
 			$(DIR)/memset.S		\
 			$(DIR)/strchr.S		\
+			$(DIR)/strcmp.S		\
 			$(DIR)/strlen.S
 
 ASMFLAGS	=	-f elf64
